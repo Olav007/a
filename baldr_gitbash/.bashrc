@@ -1,0 +1,1 @@
+ . /d/i/d_bash.sh
