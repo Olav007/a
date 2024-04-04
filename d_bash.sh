@@ -17,7 +17,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # File and Directory Management Aliases
-alias ll='ls -lah'                                  # Long list, show hidden
+alias ll='ls -lAhrt'                                  # Long list, show hidden
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -47,6 +47,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
+alias gl='git log'
 
 # Enhance Grep with color and better defaults
 alias grep='grep --color=auto'
@@ -66,4 +67,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export RPATH="${RPATH:-""}"
+export DDRIVE="${DDRIVE:-$RPATH/d}"
 alias gitis='git config core.eol;git config core.autocrlf input'
+alias hist='history'
+alias his='hist'
+alias hi='his'
+alias gl10='gl -10'
+alias cdh='cd ${DDRIVE}/hgall'
+
