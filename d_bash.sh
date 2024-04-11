@@ -48,6 +48,10 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
+alias gdiff='git diff'
+alias gd=gdiff
+alias gdno='gdiff --name-only'
+alias gun='git ls-files --others --exclude-standard'
 
 # Enhance Grep with color and better defaults
 alias grep='grep --color=auto'
