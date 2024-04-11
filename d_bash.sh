@@ -71,8 +71,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export dletter="${dletter:-"d"}"
 export RPATH="${RPATH:-""}"
-export DDRIVE="${DDRIVE:-$RPATH/d}"
+export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 alias gitis='git config core.eol;git config core.autocrlf input'
 alias hist='history'
 alias his='hist'
