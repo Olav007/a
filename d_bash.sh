@@ -52,6 +52,8 @@ alias gdiff='git diff'
 alias gd=gdiff
 alias gdno='gdiff --name-only'
 alias gun='git ls-files --others --exclude-standard'
+alias gsp='gs .'
+
 
 # Enhance Grep with color and better defaults
 alias grep='grep --color=auto'
@@ -79,5 +81,12 @@ alias hist='history'
 alias his='hist'
 alias hi='his'
 alias gl10='gl -10'
+alias findr='find .'
+alias findf='findr -type f'
+alias findd='findr -type d'
+alias makef='make -f'
+alias cdr='cd `realpath .`'
+alias cdc='cd /adm/stud/dev/compile'
 alias cdh='cd ${DDRIVE}/hgall'
+alias cda='cd ${DDRIVE}/hgall/a/alles'
 
