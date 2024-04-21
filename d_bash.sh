@@ -87,7 +87,11 @@ alias findf='findr -type f'
 alias findd='findr -type d'
 alias makef='make -f'
 alias cdr='cd `realpath .`'
+alias cog="code --goto" 
 alias cdc='cd /adm/stud/dev/compile'
-alias cdc='cd /adm/stud/dev/compile'
+alias cds='cd /adm/stud/dev/source'
 alias cdh='cd ${DDRIVE}/hgall'
 alias cda='cd ${DDRIVE}/hgall/a/alles'
+alias b2='/adm/stud/dev/compile/ob.sh 2>&1'
+alias b1='/mnt/d/hgall/compile/cmp.sh 2>&1'
+
