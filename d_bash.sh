@@ -52,6 +52,8 @@ alias gdiff='git diff'
 alias gd=gdiff
 alias gdno='gdiff --name-only'
 alias gun='git ls-files --others --exclude-standard'
+alias gw='git config --global user.name;git config --global user.email'
+'
 
 # Enhance Grep with color and better defaults
 alias grep='grep --color=auto'
