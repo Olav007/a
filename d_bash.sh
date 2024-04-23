@@ -60,10 +60,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Safe Operations
-alias rm='rm -i'                                      # Prompt before removal
-alias cp='cp -i'                                      # Prompt before overwrite
-alias mv='mv -i'                                      # Prompt before overwrite
+
 
 # Enable programmable completion features (you don't need to enable this if you're using Bash 4.2 or later, it's on by default)
 if ! shopt -oq posix; then
@@ -94,4 +91,4 @@ alias cdh='cd ${DDRIVE}/hgall'
 alias cda='cd ${DDRIVE}/hgall/a/alles'
 alias b2='/adm/stud/dev/compile/ob.sh 2>&1'
 alias b1='/mnt/d/hgall/compile/cmp.sh 2>&1'
-
+alias lr='ll -rt'
