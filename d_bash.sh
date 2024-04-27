@@ -1,3 +1,11 @@
+export D_BASH="${BASH_SOURCE[0]}"
+export IDIR="$(dirname "$D_BASH")"
+export DDRIVE="$(dirname "$IDIR")"
+alias rl='. ${D_BASH}'
+return
+#export dletter="${dletter:-"d"}"
+#export RPATH="${RPATH:-""}"
+"export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 # Enhanced History Settings
 HISTSIZE=50000                             # Increase command history size
 HISTFILESIZE=100000                        # Increase history file size
@@ -70,9 +78,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export dletter="${dletter:-"y"}"
-export RPATH="${RPATH:-""}"
-export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 alias gitis='git config core.eol;git config core.autocrlf input'
 alias hist='history'
 alias his='hist'
