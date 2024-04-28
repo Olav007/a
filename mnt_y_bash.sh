@@ -1,4 +1,3 @@
+echo "MNT"
 export RPATH="/mnt"
-export IDRIVE="/mnt/y"
-export dletter='y'
-. ${IDRIVE}/i/d_bash.sh
+. /mnt/y/i/y_drive.sh
