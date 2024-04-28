@@ -2,10 +2,9 @@ export D_BASH="${BASH_SOURCE[0]}"
 export IDIR="$(dirname "$D_BASH")"
 export DDRIVE="$(dirname "$IDIR")"
 alias rl='. ${D_BASH}'
-return
 #export dletter="${dletter:-"d"}"
-#export RPATH="${RPATH:-""}"
-"export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
+export RPATH="${RPATH:-""}"
+#"export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 # Enhanced History Settings
 HISTSIZE=50000                             # Increase command history size
 HISTFILESIZE=100000                        # Increase history file size
