@@ -1,6 +1,7 @@
 export D_BASH="${BASH_SOURCE[0]}"
 export IDIR="$(dirname "$D_BASH")"
 export DDRIVE="$(dirname "$IDIR")"
+export HGALL="${DDRIVE}/hgall"
 alias rl='. ${D_BASH}'
 #export dletter="${dletter:-"d"}"
 export RPATH="${RPATH:-""}"
@@ -86,7 +87,7 @@ alias hist='history'
 alias his='hist'
 alias hi='his'
 alias gl10='gl -10'
-alias cdh='cd ${DDRIVE}/hgall'
+alias cdh='cd ${HGALL}'
 alias findr='find .'
 alias findf='findr -type f'
 alias findd='findr -type d'
