@@ -4,6 +4,7 @@ export DDRIVE="$(dirname "$IDIR")"
 alias rl='. ${D_BASH}'
 #export dletter="${dletter:-"d"}"
 export RPATH="${RPATH:-""}"
+export HGALL="${HGALL:-"${DDRIVE}/hgall"}"
 #"export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 # Enhanced History Settings
 HISTSIZE=50000                             # Increase command history size
@@ -94,7 +95,7 @@ alias cds='cd /adm/stud/dev/source'
 alias cdh='cd ${DDRIVE}/hgall'
 alias cda='cd ${DDRIVE}/hgall/a/alles'
 alias b2='/adm/stud/dev/compile/ob.sh 2>&1'
-alias b1='/mnt/d/hgall/compile/cmp.sh 2>&1'
+alias b1='${HGALL}/compile/cmp.sh 2>&1'
 alias lr='ll -rt'
 alias gcu='git config --global user.name'
 alias gra='git commit --amend --reset-author'
