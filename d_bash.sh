@@ -55,7 +55,7 @@ alias df='df -h'                                       # Disk free space in huma
 #git config --global color.ui auto
 
 # Git Aliases
-alias gs='git status'
+alias gis='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
@@ -64,7 +64,7 @@ alias gdiff='git diff'
 alias gd=gdiff
 alias gdno='gdiff --name-only'
 alias gun='git ls-files --others --exclude-standard'
-alias gsp='gs .'
+alias gsp='git status .'
 
 
 # Enhance Grep with color and better defaults
@@ -121,6 +121,12 @@ alias grl='grep -l'
 alias grn='grep -n'
 alias ll5='ll|tail -5'
 alias ll9='ll|tail -9'
+alias ag='alias|grep ' 
+alias cdl='cd;ll9' 
+alias cdt='cd /tmp'
+alias hig='hi|grep '
+alias ca='cat'
+alias gre='grep'
 export PATH=/home/oben757/pbin:$PATH
 export PATH=$PATH:/opt/sfw/esp/bin
 export PATH=$PATH:/opt/sfw/bin
