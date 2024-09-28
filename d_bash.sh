@@ -1,3 +1,14 @@
+export D_BASH="${BASH_SOURCE[0]}"
+export IDIR="$(dirname "$D_BASH")"
+export DDRIVE="$(dirname "$IDIR")"
+alias rl='. ${D_BASH}'
+#export dletter="${dletter:-"d"}"
+export RPATH="${RPATH:-""}"
+export HGALL="${HGALL:-"${DDRIVE}/hgall"}"
+export HGALL="${HOME}/hgall"
+export CDC1=/adm/stud/dev
+export CDC2="${HGALL}/studadm-c"
+#"export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 # Enhanced History Settings
 HISTSIZE=50000                             # Increase command history size
 HISTFILESIZE=100000                        # Increase history file size
@@ -30,7 +41,7 @@ alias .....='cd ../../../../../'
 # Colorful Prompt Aliases
 alias prompt_default="PS1='\[\e[0;32m\]\u@\h \[\e[0;36m\]\w\[\e[0m\] \$ '"  # Green user@host, cyan working directory
 alias prompt_simple="PS1='\w \$ '"                                        # Just the working directory
-alias prompt_git="PS1='\[\e[0;32m\]\u@\h\[\e[0;33m\] \w\[\e[0;35m\] \$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\[\e[0m\] \$ '"  # Includes Git branch
+#alias prompt_git="PS1='\[\e[0;32m\]\u@\h\[\e[0;33m\] \w\[\e[0;35m\] \$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\[\e[0m\] \$ '"  # Includes Git branch
 
 # Misc Aliases
 alias reload='. ~/.bashrc'                             # Reload .bashrc file
@@ -40,7 +51,7 @@ alias du='du -h'                                       # Disk usage in human rea
 alias df='df -h'                                       # Disk free space in human readable format
 
 # Use Git command line with color output
-git config --global color.ui auto
+#git config --global color.ui auto
 
 # Git Aliases
 alias gs='git status'
@@ -52,18 +63,15 @@ alias gdiff='git diff'
 alias gd=gdiff
 alias gdno='gdiff --name-only'
 alias gun='git ls-files --others --exclude-standard'
-alias gw='git config --global user.name;git config --global user.email'
-'
+alias gsp='gs .'
+
 
 # Enhance Grep with color and better defaults
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Safe Operations
-alias rm='rm -i'                                      # Prompt before removal
-alias cp='cp -i'                                      # Prompt before overwrite
-alias mv='mv -i'                                      # Prompt before overwrite
+
 
 # Enable programmable completion features (you don't need to enable this if you're using Bash 4.2 or later, it's on by default)
 if ! shopt -oq posix; then
@@ -73,13 +81,47 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export dletter="${dletter:-"y"}"
-export RPATH="${RPATH:-""}"
-export DDRIVE="${DDRIVE:-$RPATH/$dletter}"
 alias gitis='git config core.eol;git config core.autocrlf input'
 alias hist='history'
 alias his='hist'
 alias hi='his'
 alias gl10='gl -10'
 alias cdh='cd ${DDRIVE}/hgall'
-
+alias findr='find .'
+alias findf='findr -type f'
+alias findd='findr -type d'
+alias makef='make -f'
+alias cdr='cd `realpath .`'
+alias cog="code --goto" 
+alias cdc='cd ${CDC1}/compile'
+alias cdc2='cd ${CDC2}/compile'
+alias cds='cd ${CDC1}/source'
+alias cds2='cd ${CDC2}/source'
+alias cdh='cd ${DDRIVE}/hgall'
+alias cda='cd ${HGALL}/a/alles'
+alias cdo='cd /home/oben757'
+alias cdob='cd /home/oben757/bin'
+alias cdop='cd /home/oben757/pbin'
+alias spath=' export PATH=/home/oben757/pbin:$PATH'
+alias rexp='cdb;/home/oben757/bin/exall.exp 2>>/tmp/exallerr.log'
+alias sexp='spath;rexp'
+alias ops='ps -ef|grep oben'
+alias cdb='cd /adm/stud/prod/bin'
+alias b2='/adm/stud/dev/compile/ob.sh 2>&1'
+alias b1='${HGALL}/compile/cmp.sh 2>&1'
+alias lr='ll -rt'
+alias gcu='git config --global user.name'
+alias gra='git commit --amend --reset-author'
+alias a2un='iconv -f iso-8859-1 -t utf-8'
+alias lcount='stat -c "%h"'
+alias llt='ll|tail -5'
+alias gr='grep'
+alias grl='grep -l'
+alias grn='grep -n'
+alias ll5='ll|tail -5'
+alias ll9='ll|tail -9'
+export PATH=/home/oben757/pbin:$PATH
+export PATH=$PATH:/opt/sfw/esp/bin
+export PATH=$PATH:/opt/sfw/bin
+export PATH=$PATH:/home/oben757/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/oben757/LIB
